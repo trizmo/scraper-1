@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+
+    {{#if article}} {{#each article}}
+    <div class="newsCard col-xs-12 col-sm-6 col-lg-6" data-id={{this._id}}>
+      <h4>
+        {{this.title}}
+      </h4>
+      {{!-- {{#if note}}{{#each note}}  --}}
+      {{this.note}} 
+      {{!-- {{/each}} {{/if}} --}}
+      <br>
+      <div class="input">
+        <label for="comment">Comment:</label>
+        <input type="text" id="comment" name="comment">
+        <button type="submit" data-id={{this._id}} id='savenote'>submit</button>
+      </div>
+    </div>
+    {{/each}} {{/if}}
+
+  </div>
+</div>
