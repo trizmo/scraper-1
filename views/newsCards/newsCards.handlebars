@@ -6,15 +6,15 @@
       <h4>
         {{this.title}}
       </h4>
-      {{!-- {{#if note}}{{#each note}}  --}}
-      {{this.note}} 
+      {{!-- {{#if note}}{{#each note}} --}}
+      <p> Previous Comment: {{this.comment2}} </p>
       {{!-- {{/each}} {{/if}} --}}
-      <br>
-      <div class="input">
-        <label for="comment">Comment:</label>
-        <input type="text" id="comment" name="comment">
-        <button type="submit" data-id={{this._id}} id='savenote'>submit</button>
-      </div>
+        <br>
+        <div class="input">
+          <label for="comment">Comment:</label>
+          <input type="text" id="comment" name="comment">
+          <button type="submit" data-id={{this._id}} id='savenote'>submit</button>
+        </div>
     </div>
     {{/each}} {{/if}}
 
