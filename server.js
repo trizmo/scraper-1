@@ -36,8 +36,8 @@ db.on('error', console.error.bind(console, 'MongoDB Connection Error: '))
 db.once('open', () => { console.log("Mongoose Connection Successful!")});
 
 //STARTING SERVER
-app.set('port', process.env.PORT || 3000);
-const server = app.listen(app.get('port'), function() {
-	// then save a log of the listening to our debugger.
-  console.log('Express server listening on port ' + server.address().port);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, function () {
+  // Log (server-side) when our server has started
+  console.log("Server listening on: http://localhost:" + PORT);
 });
